@@ -1,0 +1,104 @@
+body {
+  background: #f1c40f;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    background-color: #222;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button {
+  background: #3498db;
+  width: 180px;
+  padding: 5px;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ transition: all 0.2s linear;
+ }
+  
+
+ @-webkit-keyframes shaker {
+	0% { -webkit-transform: translate(2px, 0); }
+	50% { -webkit-transform: translate(-10px, 0); }
+	100% { -webkit-transform: translate(10px, 0); }
+}
+
+.shake {
+	-webkit-animation-name: shaker;
+	-webkit-animation-duration: 0.1s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-timing-function: linear;
+  background-color: #c0392b;
+}
+
+.shake:hover {
+  background-color: #e74c3c;
+}
+
+.shake .default {
+  display: none;
+}
+.outer {
+	margin-left: 50%; 
+}
+.inner {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  will-change: transform;
+  animation: rotator .5s linear infinite;
+}
+
+.inner:first-child {
+  background-color: #FBC02D;
+  transform-origin: 50% 100%;
+}
+
+.inner:nth-child(2) {
+  background-color: #00796B;
+  transform-origin: 50% 0;
+}
+
+@keyframes rotator {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+  
+  
+
